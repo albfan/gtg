@@ -1,0 +1,27 @@
+diff --git c/GTG/gtg i/GTG/gtg
+index 98f8806a..6027598a 100755
+--- c/GTG/gtg
++++ i/GTG/gtg
+@@ -51,6 +51,8 @@ import logging
+ import dbus
+ 
+ from optparse import OptionParser
++import gi
++gi.require_version('Gdk', '3.0')
+ from gi.repository.Gdk import Screen
+ 
+ from GTG import info
+diff --git c/GTG/gtk/manager.py i/GTG/gtk/manager.py
+index 38b511ad..dc7c0aa4 100644
+--- c/GTG/gtk/manager.py
++++ i/GTG/gtk/manager.py
+@@ -19,6 +19,9 @@
+ """
+ Manager loads the prefs and launches the gtk main loop
+ """
++import gi
++gi.require_version('Gtk', '3.0')
++
+ from gi.repository import GObject, Gtk
+ import configparser
+ 
